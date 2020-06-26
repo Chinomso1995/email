@@ -7,6 +7,22 @@ window.addEventListener('scroll', ()=>{
     window.scrollTo();
   } 
 });
+//change text on smaller screens;
+const firstText = document.querySelector('tr:nth-of-type(3) td:first-of-type');
+const secondText = document.querySelector('tr:nth-of-type(4) td:nth-of-type(2)');
+const thirdText = document.querySelector('tr:nth-of-type(5) td:nth-of-type(2)');
+const fourthText = document.querySelector('tr:nth-of-type(5) td:nth-of-type(3)');
+const fifthText = document.querySelector('tr:nth-of-type(6) td:nth-of-type(2)');
+const sixthText = document.querySelector('tr:nth-of-type(6) td:nth-of-type(3)');
+const mq = window.matchMedia( "(max-width: 500px)" );
+if(mq.matches){
+  firstText.textContent = 'bbb.bbbb@example.com';
+  secondText.textContent = 'xxx@example.com, www.www@example.com'
+  thirdText.textContent = 'vvv.vvv@example.com, uuu@example.com, ...'
+  fourthText.textContent = '[ HR-888 ] Notice of official announcement'
+  fifthText.textContent = 'sss@example.com, rrr.rrrr@example.com, ...'
+  sixthText.textContent = '[HR-887(Revised: Office Expansion Project Tea...'
+}
 //filter emails
 const searchEmail = document.querySelector('.search-email');
 

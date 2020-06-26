@@ -93,9 +93,6 @@ body{
   border-collapse: collapse;
   width: 100%;
 }
-th:first-of-type>span img{
-  display: none;
-}
 td, th {
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
@@ -105,91 +102,107 @@ td, th {
 td{
   font-size: 1.2rem;
 }
-
 td:last-of-type{
   font-weight: 700;
 }
-.attachment{
-  display: flex;
-  justify-content: center;
-  width: 20%;
-  align-items: center;
-  
-  
-}
 
-.first-clip span:last-of-type{
-  margin-right: 20px;
-}
 
-.last-clip{
-  margin-left: 25px;
-}
-.attachment span:last-of-type{
-  flex-shrink: 0;
-}
-.attachment span:first-of-type img{
-  width: 20px;
-  height: 20px;
-}
-.text-attachment{
-  display: flex;
-  justify-content: space-around;
-}
-.text-attachment span:first-of-type{
-  transform: translateX(-18px);
-}
-.second-text{
-  transform: translateX(5px);
-}
 
-.text-attachment span:last-of-type{
-  border: 1px solid #ccc;
-  background-color: #5E5D5D;
-  color: white;
-  border-radius: 5px;
-  padding: 0px 5px;
-}
-.second-text span:last-of-type{
-  transform: translateX(-10px);
-}
-td  img{
-  width: 20px;
-  height: 20px;
-  transform: translateX(-30px);
-}
 
 th{
   background-color: #EEEDED;
   border-top: 3px solid #dddddd;
   border-bottom: 3px solid #dddddd;
+  position: relative;
+}
+th:last-of-type:after{
+  content: url('../assets/icon_arrow01.svg');
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  transform: translateX(10px);
 }
 th:not(:last-child){
   color: #5E5D5D;
-}
-.date>span img{
-  height: 10px;
-  width: 10px;
-  padding-left: 3px;
 }
 tr:not(:first-of-type):hover{
   cursor: pointer;
   color: blue;
   background-color: #EEEDED;
 }
+tr:nth-of-type(4) td:nth-of-type(2){
+  position: relative;
+}
+tr:nth-of-type(4) td:nth-of-type(2):after{
+  content: '+1';
+  border: 1px solid #5E5D5D;
+  color: white;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 0px 5px;
+  position: absolute;
+  right: 6px;
+  
+}
+tr:nth-of-type(5) td:nth-of-type(2){
+  position: relative;
+}
+tr:nth-of-type(5) td:nth-of-type(2):after{
+  content: '+1';
+  border: 1px solid #5E5D5D;
+  color: white;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 0px 5px;
+  position: absolute;
+  right: 6px;
+  
+}
+tr:nth-of-type(6) td:nth-of-type(2){
+  position: relative;
+}
+tr:nth-of-type(6) td:nth-of-type(2):after{
+  content: '+1';
+  border: 1px solid #5E5D5D;
+  color: white;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 0px 5px;
+  position: absolute;
+  right: 6px;
+  
+}
+tr:nth-of-type(4) td:last-of-type{
+  position: relative;
+}
+tr:nth-of-type(4) td:last-of-type:before{
+  content: url('../assets/icon_clip.svg');
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  transform: translateX(-50px);   
+}
+tr:nth-of-type(9) td:last-of-type{
+  position: relative;
+}
+tr:nth-of-type(9) td:last-of-type:before{
+  content: url('../assets/icon_clip.svg');
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  transform: translateX(-50px);   
+}
+tr:nth-of-type(10) td:last-of-type{
+  position: relative;
+}
+tr:nth-of-type(10) td:last-of-type:before{
+  content: url('../assets/icon_clip.svg');
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  transform: translateX(-50px);   
+}
 
-tr td:last-of-type>span img{
-  width: 10px;
-  height: 10px;
-  transform: translateX(90px);
-  display: none;
-}
-.first-clip span:last-of-type>span img{
-  width: 10px;
-  height: 10px;
-  transform: translateX(90px);
-  display: none;
-}
 @media screen and (max-width: 767px){
   
   body{
@@ -259,63 +272,49 @@ tr td:last-of-type>span img{
     justify-content: left;
     width: 100%;
     background-color: #EEEDED;
+    font-size: 0.9rem;
     
   }
-  th:first-of-type>span img{
-    display: block;
-    height: 10px;
-    width: 10px;
-    padding-left: 3px;
-    transform: translate(38px, -13px);
-  }
-  th:first-of-type{
-    color: black;
-  }
-  th{
-    margin-top: 15px;
-    padding-left: 20px;
-    font-size: 0.9rem;
-  }
-  .date{
-    font-weight: 500;
-   
-  }
-  .date>span img{
+  tr:nth-of-type(1) th:last-of-type:after{
     display: none;
   }
-  th:first-of-type:after{
-  content: "";
-  position: absolute;
-  background-color: #838383;
-  width: 2px;
-  height: 15px;
-  transform: translate(56px, -25px);
-  
+  tr:nth-of-type(1) th:last-of-type{
+    color: #5E5D5D;
   }
-  th:nth-of-type(2):after{
-    content: "";
+  th:first-of-type{
+    position: relative;
+    color: black;
+  }
+  tr:nth-of-type(1) th:first-of-type:after{
+    content: url('../assets/icon_arrow01.svg');
+    height: 6px;
+    width: 6px;
     position: absolute;
-    background-color: #838383;
-    width: 2px;
-    height: 15px;
-    transform: translate(15px, 3px);
-  
+    transform: translateX(2px);
+    color: black;
   }
-  th:nth-of-type(3)::after{
-    content: "";
+  tr:nth-of-type(1) th:not(:first-of-type):after{
+    content: '';
+    height: 10px;
+    width: 1px;
+    background-color: #5E5D5D;
     position: absolute;
-    background-color: #838383;
-    width: 1.5px;
-    height: 15px;
-    transform: translate(8px, 3px);
-    
+    transform: translate(7px, 4px);
   }
+  th:nth-of-type(2)::before{
+    content: '';
+    height: 10px;
+    width: 1px;
+    background-color: #5E5D5D;
+    position: absolute;
+    transform: translate(-5px, 4px);
+  }
+  
   .email-table table tr:not(:nth-of-type(1)){
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
-    justify-content: center;
     position:relative;
     margin: auto;
     height: 95px;
@@ -330,13 +329,6 @@ tr td:last-of-type>span img{
     top: 100%;
     left: 0;
 }
-  .email-table table tr:not(:nth-of-type(1)) td:first-of-type{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    font-size: 0.8rem;
-    font-weight: 700;
-    
-  }
   .email-table table tr:not(:nth-of-type(1)):before{
     content:url('../assets/icon_mail_sp.svg');   
     width: 10px;
@@ -344,224 +336,67 @@ tr td:last-of-type>span img{
     position: absolute;
     transform: translate(15px,10px);
   }
-  .email-table table tr td:last-of-type{
-    transform: translateX(120px);
+  tr td:first-of-type{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row: 1;
+    transform: translate(20px, -5px);
+    font-size: 0.9rem;
+    font-weight: 700;
   }
-  .email-table table tr:not(:nth-of-type(4)) td:last-of-type::after{
-    content: url('../assets/icon_arrow02.svg');
-    width: 3px;
-    height: 3px;
-    position: absolute;
-    transform: translateX(3px);
-  }
-  .email-table table tr:nth-of-type(4) td:last-of-type span:last-of-type::after{
-    content: url('../assets/icon_arrow02.svg');
-    width: 3px;
-    height: 3px;
-    position: absolute;
-    transform: translateX(3px);
-  }
-  
-  tr:nth-of-type(6) ~ tr::after{
-    display: none;
-    
-   }
-   tr:nth-of-type(6) ~ tr::before{
-    display: none;
-    
-   }
-  .second-data{
+  tr td:nth-of-type(2){
+    grid-column-start: 1;
+    grid-column-end: -1;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 2;
+    font-size: 0.9rem;
+    transform: translate(20px, -25px);
+  }
+  tr td:nth-of-type(3){
     grid-column-start: 1;
     grid-column-end: -1;
-    font-size: 0.8rem;
-  }
-  .third-data{
     grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
+    grid-row-end: 3;
+    transform: translateY(-30px);
+    font-size: 1rem;
+  }
+  tr td:last-of-type{
+    grid-column-start: 2;
     grid-column-end: -1;
-    font-size: 0.9rem;
-  }
-  td:last-of-type{
-    font-size: 0.9rem;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    font-size: 0.7rem;
     font-weight: 500;
+    transform: translateX(130px);
   }
-  .first-second-data{
-    transform: translateY(-20px);
-  }
-  .first-third-data{
-    transform: translate(-20px, -27px);
-    
-  }
-  tr:nth-of-type(2) td:first-of-type{
-    transform: translate(20px, -2px);
-  }
-  tr:nth-of-type(2) td:nth-of-type(2){
-    transform: translate(20px, -15px);
-  }
-  tr:nth-of-type(2) td:nth-of-type(3){
-    transform: translate(5px, -15px);
-    font-size: 1rem;
-  }
-  tr:nth-of-type(3) td:first-of-type{
-    visibility: hidden;
-  }
-  tr:nth-of-type(3) td:first-of-type:after{
-    visibility: visible;
-    content: 'bbb.bbbb@example.com';
+  tr td:last-of-type::after{
+    content: url('../assets/icon_arrow02.svg');
+    height: 3px;
+    width: 3px;
     position: absolute;
-    transform: translate(-85px);
+    transform: translateX(5px);
     
   }
-  tr:nth-of-type(3) td:nth-of-type(2){
-    transform: translate(20px, -15px);
+  tr:nth-of-type(4) td:last-of-type:before{
+    transform: translateX(-30px);   
   }
-  tr:nth-of-type(4) td:first-of-type{
-    transform: translate(20px, -3px);
-  }
-  tr:nth-of-type(4) td:nth-of-type(2){
-    visibility: hidden;
-  }
-  tr:nth-of-type(3) td:nth-of-type(2):after{
-    visibility: visible;
-    content: 'xxx@example.com, www.www@example.com';
-    position: absolute;
-    transform: translate(-108px, 92px);
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  tr:nth-of-type(4) td:nth-of-type(2):after{
+    display: none;
     
   }
-  tr:nth-of-type(5) td:first-of-type:after{
-    visibility: visible;
-    content: 'ddd.dddd@example.com';
-    position: absolute;
-    transform: translateX(-85px);
-    
-  }
-  tr:nth-of-type(5) td:first-of-type{
-    visibility: hidden;
-  }
-  
-  .fourth-second-data .second-text span:first-of-type{
-    visibility: hidden;
-  }
-  .fourth-second-data .second-text span:first-of-type:after{
-    visibility: visible;
-    content: 'vvv.vvv@example.com, uuu@example.com, ...';
-    position: absolute;
-    transform: translate(-155px, 15px);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    
-  }
-  
-  tr:nth-of-type(6) td:first-of-type{
-    transform: translate(20px);
-  }
-  .second-text span:last-of-type{
-    transform: translate(40px, 15px);
+  tr:nth-of-type(5) td:nth-of-type(2):after{
+    transform: translate(-15px, 3px);
     padding: 0 3px;
-    border-radius: 3px;
-  }
-  .first-clip span:first-of-type img{
-    width: 15px;
-    height: 15px;
-    transform: translateX(-5px);
-  }
-  .second-second-data{
-    transform: translate( 27px   , -20px);
-  }
-  .second-third-data{
-    transform: translate(10px, -10px);
-    font-size: 1rem;
-  }
-  .third-second-data{
-    transform: translateY(-30px);
-  }
-  .third-third-data{
-    transform: translate(10px, -20px);
-    font-size: 1rem;
-  }
-  .fourth-second-data{
-    transform: translateY(-30px);
-  }
+    font-size: 0.7rem;
   
-  .fourth-third-data{
-    visibility: hidden;
   }
-  .fourth-third-data:after{
-    visibility: visible;
-    content: '[ HR-888 ] Notice of official announcement';
-    position: absolute;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transform: translate(-80px, -40px);
-    font-size: 1rem;
-  }
-  .last-attachment span:first-of-type{
-    visibility: hidden;
-  }
-  .last-attachment span:first-of-type:after{
-    visibility: visible;
-    content: 'sss@example.com, rrr.rrrr@example.com, ...';
-    position: absolute;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transform: translate(-140px, 5px);
-    
-    
-  }
-  .last-attachment span:last-of-type{
-    transform: translate(50px, 2px);
-    border-radius: 3px;
+  tr:nth-of-type(6) td:nth-of-type(2):after{
+    transform: translate(-15px, 3px);
     padding: 0 3px;
+    font-size: 0.7rem;
+    
   }
-  .fifth-second-data{
-    transform: translateY(-20px);
-  }
-  .fifth-third-data{
-    visibility: hidden;
-  }
-  .fifth-third-data:after{
-    visibility: visible;
-    content: '[HR-887(Revised: Office Expansion Project Tea...';
-    position: absolute;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transform: translate(-120px, -15px);
-    font-size: 1rem;
 
-  }
-  
-  tr td:last-of-type>span img{
-    
-    transform: translateX(60px);
-    display: block;
-  }
-  .first-clip span:last-of-type>span img{
-    
-    transform: translateX(3px);
-    display: block;
-  }
-  tr:nth-of-type(7) td{
-    display: none;
-  }
-  tr:nth-of-type(8) td{
-    display: none;
-  }
-  tr:nth-of-type(9) td{
-    display: none;
-  }
-  tr:nth-of-type(10) td, tr:nth-of-type(10) td:last-of-type{
-    display: none;
-  }
-  tr:nth-of-type(11) td, tr:nth-of-type(11) td:last-of-type{
-    display: none;
-  }
-  
- 
-  
 }
 
