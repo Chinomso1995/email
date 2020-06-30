@@ -24,22 +24,30 @@ body{
   width: 80%;
   height: 90%;
   top: 3px;
-  transform: translateX(3px);
+  transform: translate(3px);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  
 }
 .calendar-container img{
   width: 30px;
   height: 30px;
 }
-.calendar-container>div span{
+.calendar-container span{
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.2rem;
-  padding-right: 50px;
+  position: relative;
+}
+.calendar-container span:before{
+  content: url('../assets/icon_calender.svg');
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50px, -3px);
 }
 .date-container div:last-of-type img{
   width: 30px;
@@ -130,6 +138,7 @@ tr:not(:first-of-type):hover{
   color: blue;
   background-color: #EEEDED;
 }
+
 tr:nth-of-type(4) td:nth-of-type(2){
   position: relative;
 }
@@ -190,7 +199,7 @@ tr:nth-of-type(9) td:last-of-type:before{
   height: 15px;
   width: 15px;
   position: absolute;
-  transform: translateX(-50px);   
+  transform: translateX(-50px);  
 }
 tr:nth-of-type(10) td:last-of-type{
   position: relative;
@@ -211,37 +220,39 @@ tr:nth-of-type(10) td:last-of-type:before{
     
   }
   .date-container{
-    width: 260px;
-    height: 40px;
+    width: 300px;
+    height: 48px;
     margin: 0 10px 0 10px;
+    border-radius: 8px;
   }
   .calendar-container{
     position: absolute;
     background-color: #fff;
-    width: 85%;
-    top: 2px;
-    transform: translateX(3px);
+    width: 80%;
+    height: 44px;
+    transform: translate(2px, -1px);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
   }
-  .calendar-container img{
-    width: 20px;
-    height: 20px;
-  }
-  .calendar-container>div span{
+  
+  .calendar-container span{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 0.8rem;
-    
-    
+    font-size: 1rem; 
+    transform: translateX(6px); 
+  }
+  .calendar-container span:before{
+    width: 22px;
+    height: 22px;
+    transform: translate(-30px, -2px);
   }
   .date-container div:last-of-type img{
     width: 20px;
     height: 20px;
-    transform: translate(230px, 11px);
+    transform: translate(260px, 14px);
     
   }
   .text-container{
@@ -249,10 +260,13 @@ tr:nth-of-type(10) td:last-of-type:before{
  }
  .text-container h1{
   
-   font-size: 1rem;
+   font-size: 0.8rem;
+ }
+ .email input[type= "text"]{
+   transform: translateY(5px);
  }
  .text-container h1>span{
-   font-size: 1.3rem;
+   font-size: 1rem;
    padding-right: 3px;
  }
   .email-table{
@@ -290,7 +304,7 @@ tr:nth-of-type(10) td:last-of-type:before{
     height: 6px;
     width: 6px;
     position: absolute;
-    transform: translateX(2px);
+    transform: translate(2px, -1px);
     color: black;
   }
   tr:nth-of-type(1) th:not(:first-of-type):after{
